@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Message">
+        <s:complexType />
+      </s:element>
+      <s:element name="MessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MessageResult" type="tns:ArrayOfModel_movies" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfModel_movies">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="model_movies" nillable="true" type="tns:model_movies" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="model_movies">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Times" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Duration" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Place" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Actor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Link" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MessageDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="link" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tag" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MessageDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MessageDetailResult" type="tns:model_detail" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="model_detail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Describe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Actor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Duration" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RelatedMovies">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="link" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RelatedMoviesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RelatedMoviesResult" type="tns:ArrayOfModel_moviecrude" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfModel_moviecrude">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="model_moviecrude" nillable="true" type="tns:model_moviecrude" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="model_moviecrude">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Link" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MovieAssess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="link" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovieAssessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MovieAssessResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Message_coming">
+        <s:complexType />
+      </s:element>
+      <s:element name="Message_comingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Message_comingResult" type="tns:ArrayOfModel_movies_coming" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfModel_movies_coming">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="model_movies_coming" nillable="true" type="tns:model_movies_coming" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="model_movies_coming">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Times" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Place" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Link" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MessageSoapIn">
+    <wsdl:part name="parameters" element="tns:Message" />
+  </wsdl:message>
+  <wsdl:message name="MessageSoapOut">
+    <wsdl:part name="parameters" element="tns:MessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="MessageDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:MessageDetail" />
+  </wsdl:message>
+  <wsdl:message name="MessageDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:MessageDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="RelatedMoviesSoapIn">
+    <wsdl:part name="parameters" element="tns:RelatedMovies" />
+  </wsdl:message>
+  <wsdl:message name="RelatedMoviesSoapOut">
+    <wsdl:part name="parameters" element="tns:RelatedMoviesResponse" />
+  </wsdl:message>
+  <wsdl:message name="MovieAssessSoapIn">
+    <wsdl:part name="parameters" element="tns:MovieAssess" />
+  </wsdl:message>
+  <wsdl:message name="MovieAssessSoapOut">
+    <wsdl:part name="parameters" element="tns:MovieAssessResponse" />
+  </wsdl:message>
+  <wsdl:message name="Message_comingSoapIn">
+    <wsdl:part name="parameters" element="tns:Message_coming" />
+  </wsdl:message>
+  <wsdl:message name="Message_comingSoapOut">
+    <wsdl:part name="parameters" element="tns:Message_comingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="Message">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取热映电影基本信息</wsdl:documentation>
+      <wsdl:input message="tns:MessageSoapIn" />
+      <wsdl:output message="tns:MessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取电影详细信息</wsdl:documentation>
+      <wsdl:input message="tns:MessageDetailSoapIn" />
+      <wsdl:output message="tns:MessageDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RelatedMovies">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取相关电影</wsdl:documentation>
+      <wsdl:input message="tns:RelatedMoviesSoapIn" />
+      <wsdl:output message="tns:RelatedMoviesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovieAssess">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取电影短评</wsdl:documentation>
+      <wsdl:input message="tns:MovieAssessSoapIn" />
+      <wsdl:output message="tns:MovieAssessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Message_coming">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取即将上映的电影基本信息</wsdl:documentation>
+      <wsdl:input message="tns:Message_comingSoapIn" />
+      <wsdl:output message="tns:Message_comingSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Message">
+      <soap:operation soapAction="http://tempuri.org/Message" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MessageDetail">
+      <soap:operation soapAction="http://tempuri.org/MessageDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RelatedMovies">
+      <soap:operation soapAction="http://tempuri.org/RelatedMovies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovieAssess">
+      <soap:operation soapAction="http://tempuri.org/MovieAssess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Message_coming">
+      <soap:operation soapAction="http://tempuri.org/Message_coming" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Message">
+      <soap12:operation soapAction="http://tempuri.org/Message" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MessageDetail">
+      <soap12:operation soapAction="http://tempuri.org/MessageDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RelatedMovies">
+      <soap12:operation soapAction="http://tempuri.org/RelatedMovies" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovieAssess">
+      <soap12:operation soapAction="http://tempuri.org/MovieAssess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Message_coming">
+      <soap12:operation soapAction="http://tempuri.org/Message_coming" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://localhost:52550/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://localhost:52550/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

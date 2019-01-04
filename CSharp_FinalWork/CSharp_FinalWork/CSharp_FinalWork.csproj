@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C6133D5-65F9-4F42-9FDF-00683ED79B69}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSharp_FinalWork</RootNamespace>
+    <AssemblyName>CSharp_FinalWork</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IrisSkin4, Version=2006.3.22.45, Culture=neutral, PublicKeyToken=127be25a6db25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IrisSkin4.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessOperation.cs" />
+    <Compile Include="Assess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assess.Designer.cs">
+      <DependentUpon>Assess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forget.Designer.cs">
+      <DependentUpon>Forget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputMessages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputMessages.Designer.cs">
+      <DependentUpon>InputMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Related.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Related.Designer.cs">
+      <DependentUpon>Related.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchResult.Designer.cs">
+      <DependentUpon>SearchResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Single.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Single.Designer.cs">
+      <DependentUpon>Single.cs</DependentUpon>
+    </Compile>
+    <Compile Include="singleDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="singleDB.Designer.cs">
+      <DependentUpon>singleDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMessages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMessages.Designer.cs">
+      <DependentUpon>UserMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Assess.resx">
+      <DependentUpon>Assess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forget.resx">
+      <DependentUpon>Forget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputMessages.resx">
+      <DependentUpon>InputMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Related.resx">
+      <DependentUpon>Related.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchResult.resx">
+      <DependentUpon>SearchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Single.resx">
+      <DependentUpon>Single.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="singleDB.resx">
+      <DependentUpon>singleDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMessages.resx">
+      <DependentUpon>UserMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\WebService\CSharp_FinalWork.WebService.ArrayOfModel_moviecrude.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\CSharp_FinalWork.WebService.ArrayOfModel_movies.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\CSharp_FinalWork.WebService.ArrayOfModel_movies_coming.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\CSharp_FinalWork.WebService.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\CSharp_FinalWork.WebService.MessageDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\CSharp_FinalWork.WebService.MessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\CSharp_FinalWork.WebService.Message_comingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\CSharp_FinalWork.WebService.model_detail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\CSharp_FinalWork.WebService.MovieAssessResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\CSharp_FinalWork.WebService.RelatedMoviesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\WebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WebService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WebService\WebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Logo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
