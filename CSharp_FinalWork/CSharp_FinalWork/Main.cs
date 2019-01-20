@@ -6,13 +6,14 @@ using Newtonsoft.Json.Linq;
 using System.Net;
 using System.Threading;
 using System.Drawing;
+using CSharp_FinalWork.cn.smallfunny.web;
 
 namespace CSharp_FinalWork
 {
     public partial class Main : Form
     {
         string username = "";
-        WebService.WebServiceSoapClient Movies = new WebService.WebServiceSoapClient();
+        WebService Movies = new WebService();
         bool[] flag = new bool[6] { false, false, false, false, false, false };
         string[] HotLinks = new string[100];
         string[] ComingLinks = new string[100];
@@ -56,11 +57,11 @@ namespace CSharp_FinalWork
 
             LvHot.BeginUpdate();
 
-            WebService.model_movies[] HotMovies = null;
+            cn.smallfunny.web.model_movies[] HotMovies = null;
 
             try
             {
-                HotMovies = Movies.Message().ToArray();
+                HotMovies = Movies.Message();
             }
             catch
             {
@@ -129,10 +130,10 @@ namespace CSharp_FinalWork
 
                 LvComing.BeginUpdate();
 
-                WebService.model_movies_coming[] ComingMovies = null;
+                cn.smallfunny.web.model_movies_coming[] ComingMovies = null;
                 try
                 {
-                    ComingMovies = Movies.Message_coming().ToArray();
+                    ComingMovies = Movies.Message_coming();
                 }
                 catch
                 {
@@ -167,7 +168,7 @@ namespace CSharp_FinalWork
                 string NewDownload = "";
                 try
                 {
-                    NewDownload = HttpGet("http://127.0.0.1:5000/NewMovies/");
+                    NewDownload = HttpGet("http://web.smallfunny.cn:88/NewMovies/");
                     
                 }
                 catch
@@ -233,7 +234,7 @@ namespace CSharp_FinalWork
                 string ChineseMovies = "";
                 try
                 {
-                    ChineseMovies = HttpGet("http://127.0.0.1:5000/ChineseMovies/");
+                    ChineseMovies = HttpGet("http://web.smallfunny.cn:88/ChineseMovies/");
                 }
                 catch
                 {
@@ -282,7 +283,7 @@ namespace CSharp_FinalWork
                 string WesternMovies = "";
                 try
                 {
-                    WesternMovies = HttpGet("http://127.0.0.1:5000/WesternMovies/");
+                    WesternMovies = HttpGet("http://web.smallfunny.cn:88/WesternMovies/");
                 }
                 catch
                 {
@@ -331,7 +332,7 @@ namespace CSharp_FinalWork
                 string RihanMovies = "";
                 try
                 {
-                    RihanMovies = HttpGet("http://127.0.0.1:5000/RihanMovies/");
+                    RihanMovies = HttpGet("http://web.smallfunny.cn:88/RihanMovies/");
                 }
                 catch
                 {

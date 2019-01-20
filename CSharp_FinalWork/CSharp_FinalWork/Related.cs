@@ -9,14 +9,15 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Web.Services;
 
 namespace CSharp_FinalWork
 {
     public partial class Related : Form
     {
         string username;
-        WebService.WebServiceSoapClient Movies = new WebService.WebServiceSoapClient();
-        WebService.model_moviecrude[] RelatedMovies = null;
+        cn.smallfunny.web.WebService Movies = new cn.smallfunny.web.WebService();
+        cn.smallfunny.web.model_moviecrude[] RelatedMovies = null;
 
         public Related(string u , string Link)
         {

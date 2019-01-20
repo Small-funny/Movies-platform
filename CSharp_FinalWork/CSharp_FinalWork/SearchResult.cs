@@ -24,7 +24,7 @@ namespace CSharp_FinalWork
             JArray SearchMovies_jar = null;
             try
             {
-                string SearchMovies = HttpGet("http://127.0.0.1:5000/MoviesTitle/" + m);
+                string SearchMovies = HttpGet("http://web.smallfunny.cn:88/MoviesTitle?name=" + m);
                 SearchMovies_jar = JArray.Parse(SearchMovies);
             }catch
             {

@@ -16,10 +16,9 @@ namespace CSharp_FinalWork
             InitializeComponent();
             this.Link = Link;
             this.username = username;
+            cn.smallfunny.web.WebService Movies = new cn.smallfunny.web.WebService();
 
-            WebService.WebServiceSoapClient Movies = new WebService.WebServiceSoapClient();
-
-            WebService.model_detail messages = null;
+            cn.smallfunny.web.model_detail messages = null;
             try
             {
                 messages = Movies.MessageDetail(Link ,x);

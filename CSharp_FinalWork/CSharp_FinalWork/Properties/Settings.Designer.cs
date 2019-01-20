@@ -22,5 +22,15 @@ namespace CSharp_FinalWork.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://web.smallfunny.cn:8080/WebService.asmx")]
+        public string CSharp_FinalWork_cn_smallfunny_web_WebService {
+            get {
+                return ((string)(this["CSharp_FinalWork_cn_smallfunny_web_WebService"]));
+            }
+        }
     }
 }

@@ -109,11 +109,6 @@
     <Compile Include="SearchResult.Designer.cs">
       <DependentUpon>SearchResult.cs</DependentUpon>
     </Compile>
-    <Compile Include="Service References\WebService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Single.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +132,11 @@
     </Compile>
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\cn.smallfunny.web\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Assess.resx">
       <DependentUpon>Assess.cs</DependentUpon>
@@ -194,64 +194,51 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\WebService\CSharp_FinalWork.WebService.ArrayOfModel_moviecrude.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\cn.smallfunny.web\model_detail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Service References\WebService\CSharp_FinalWork.WebService.ArrayOfModel_movies.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\cn.smallfunny.web\model_moviecrude.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Service References\WebService\CSharp_FinalWork.WebService.ArrayOfModel_movies_coming.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\cn.smallfunny.web\model_movies.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Service References\WebService\CSharp_FinalWork.WebService.ArrayOfString.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\cn.smallfunny.web\model_movies_coming.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Service References\WebService\CSharp_FinalWork.WebService.MessageDetailResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\cn.smallfunny.web\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\WebService\CSharp_FinalWork.WebService.MessageResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\CSharp_FinalWork.WebService.Message_comingResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\CSharp_FinalWork.WebService.model_detail.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\CSharp_FinalWork.WebService.MovieAssessResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\CSharp_FinalWork.WebService.RelatedMoviesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\WebService.wsdl" />
+    <None Include="Web References\cn.smallfunny.web\WebService.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\WebService\" />
+    <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\WebService\WebService.disco" />
+    <WebReferenceUrl Include="http://web.smallfunny.cn:8080/WebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\cn.smallfunny.web\</RelPath>
+      <UpdateFromURL>http://web.smallfunny.cn:8080/WebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CSharp_FinalWork_cn_smallfunny_web_WebService</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\WebService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\WebService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\WebService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\Logo.jpg" />
+    <None Include="Web References\cn.smallfunny.web\WebService.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

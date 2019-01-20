@@ -20,7 +20,7 @@ namespace CSharp_FinalWork
             //MessageBox.Show(username);
             try
             {
-                messages = HttpGet("http://127.0.0.1:5000/MoviesDetail/" + m.Replace("/", "'"));
+                messages = HttpGet("http://web.smallfunny.cn:88/MoviesDetail/" + m.Replace("/", "'"));
                 JArray messages_jar = JArray.Parse(messages);
 
                 JObject x;
@@ -85,7 +85,7 @@ namespace CSharp_FinalWork
             }
             try
             {
-                links = HttpGet("http://127.0.0.1:5000/MoviesLink/" + m.Replace("/", "'"));
+                links = HttpGet("http://web.smallfunny.cn:88/MoviesLink/" + m.Replace("/", "'"));
                 JArray links_jar = JArray.Parse(links);
                 JObject y = JObject.Parse(links_jar[0].ToString());
                 textBox1.Text += y["1"].ToString();

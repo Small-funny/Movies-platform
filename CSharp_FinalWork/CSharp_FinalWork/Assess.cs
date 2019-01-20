@@ -17,9 +17,9 @@ namespace CSharp_FinalWork
             
             InitializeComponent();
 
-            WebService.WebServiceSoapClient Movies = new WebService.WebServiceSoapClient();
+            cn.smallfunny.web.WebService Movies = new cn.smallfunny.web.WebService();
 
-            WebService.ArrayOfString assess = null;
+            string[] assess = null;
             try
             {
                 assess = Movies.MovieAssess(Link);
@@ -29,10 +29,9 @@ namespace CSharp_FinalWork
                 MessageBox.Show("加载出错！");
             }
 
-            string[] assessx = assess.ToArray();
-            textBox1.Text = "    " + assessx[0];
-            textBox2.Text = "    " + assessx[1];
-            textBox3.Text = "    " + assessx[2];
+            textBox1.Text = "    " + assess[0];
+            textBox2.Text = "    " + assess[1];
+            textBox3.Text = "    " + assess[2];
         }
     }
 }
